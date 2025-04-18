@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/form-style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Email<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="email" name="email" maxlength="35" placeholder="Enter email..." oninput="onInputEmail()" required autocomplete="off" autofocus />
+                <span id="emailError" class="text-danger validation-msg-style"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Username<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="username" name="username" maxlength="15" placeholder="Enter username..." oninput="onInputUsername()" required autocomplete="off"/>
+                <span id="usernameError" class="text-danger validation-msg-style"></span>
+            </div>
+            <p class="text-muted"><span class="text-danger">*</span> Fields are mandatory</p>
+            <button class="btn" type="button" onclick="login()">Login</button>
+            
+        </form>
+        <div id="snackbar"></div>
+    </div>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

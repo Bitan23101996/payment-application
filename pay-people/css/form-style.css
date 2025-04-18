@@ -1,0 +1,74 @@
+.text-danger {
+    color: #ff1e1e;
+}
+
+.validation-msg-style {
+    font-size: 0.8rem;
+    font-family: emoji;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #9d0d93;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9d0d93;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.form-control:focus {
+    outline: none !important;
+    border: 2px solid #9d0d93;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #9d0d93;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:disabled {
+    background-color: #dea2da;
+    cursor: not-allowed;
+    /* pointer-events: none; */
+}
+
+input.form-control:disabled {
+    background: #e6e1e1;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

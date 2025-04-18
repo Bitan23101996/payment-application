@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form-style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Top Header-->
+        <div class="navbar">
+
+             <!--Brand Name with logo-->
+             <div class="nav-logo-title">
+                <img src="./images/logo_image.png" alt="Webiste Logo" class="img-fluid"/>
+                <h2><a href="javascript:void(0)" onclick="goToDashboard()">Pay People</a></h2>
+            </div>
+            <!--/Brand Name with logo-->
+
+            <!--Nav Menu-->
+            <nav class="nav-flex">
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="goToDashboard()">Home</a></li>
+                    <li><a class="active" href="javascript:void(0)" onclick="gotoPayment()">Pay</a></li>
+                    <li><a href="javascript:void(0)" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+            <!--/Nav Menu-->
+        </div>
+        <!--/Top Header-->
+        <!--Breadcum Menu-->
+        <ul class="breadcrumb">
+            <li><a href="javascript:void(0)" onclick="goToDashboard()" title="Go to Dashboard">Dashboard</a></li>
+            <li>Payment</li>
+        </ul>
+        <!--/Breadcum Menu-->
+
+        <div class="payment-content">
+            <div class="payment-container">
+                <form>
+                    <div class="form-group">
+                        <label for="fromEmail">From email<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="fromEmail" name="fromEmail" maxlength="30"
+                            placeholder="Enter from email..." required autocomplete="off" autofocus />
+                    </div>
+                    <div class="form-group">
+                        <label for="toEmail">To email<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control mb-10" id="toEmail" name="toEmail" maxlength="30"
+                            placeholder="Enter to email..." required autocomplete="off"
+                            oninput="formValidationCheckForEmail(event)" />
+                            <p id="emailError" class="text-danger validation-msg-style"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control mb-10" id="amount" name="amount" maxlength="7"
+                            placeholder="Enter amount..." required autocomplete="off" oninput="formValidationCheckForAmount(event)" />
+                        <p id="amountError" class="text-danger validation-msg-style"></p>
+                    </div>
+                    <p class="text-muted mb-10"><span class="text-danger">*</span> Fields are mandatory</p>
+
+                    <button class="btn" type="button" id="paymentBtn" onclick="doPayment()">Pay</button>
+                </form>
+            </div>
+        </div>
+        <div id="snackbar"></div>
+
+
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/payment.js"></script>
+</body>
+
+</html>

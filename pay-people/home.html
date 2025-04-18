@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Top Header-->
+        <div class="navbar">
+
+            <!--Brand Name with logo-->
+            <div class="nav-logo-title">
+                <img src="./images/logo_image.png" alt="Webiste Logo" class="img-fluid"/>
+                <h2><a href="javascript:void(0)" onclick="goToDashboard()">Pay People</a></h2>
+            </div>
+            <!--/Brand Name with logo-->
+
+            <!--Nav Menu-->
+            <nav class="nav-flex">
+                <!--nav-links-->
+                <ul>
+                    <li><a class="active" href="javascript:void(0)" onclick="goToDashboard()">Home</a></li>
+                    <li><a href="javascript:void(0)" onclick="gotoPayment()">Pay</a></li>
+                    <li><a href="javascript:void(0)" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+            <!--/Nav Menu-->
+        </div>
+        <!--/Top Header-->
+        <!--Breadcum Menu-->
+        <ul class="breadcrumb">
+            <li>Dashboard</li>
+        </ul>
+        <!--/Breadcum Menu-->
+        <!--Payment History-->
+        <div class="card-content">
+            <div class="card-container">
+                <div class="card">
+                    <h3>Welcome, <span id="username"></span></h3>
+                    <p>Your wallet balance is</p>
+                    <b class="wallet-balance">&#8377;<span id="walletBalance"></span></b>
+                </div>
+                <div class="card">
+                    <div class="tableFixHead">
+                        <table id="transactionTable" class="payment-table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sl No.</th>
+                                    <th>Receiver Email</th>
+                                    <th>Amount(Rs.)</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Payment History -->
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
